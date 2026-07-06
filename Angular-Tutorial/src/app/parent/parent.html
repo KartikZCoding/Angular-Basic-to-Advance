@@ -1,0 +1,26 @@
+<h1>Parent</h1>
+<h2>Selected user : {{ selectedUserName() }}</h2>
+<hr />
+
+<h2>single child element</h2>
+<app-child
+  [userName]="userName()"
+  (selectedUser)="selectedUser($event)"
+  (deletedUser)="deleteUser($event)"
+></app-child>
+<hr />
+<h2>multiple child element</h2>
+<input
+  type="text"
+  [value]="user()"
+  placeholder="enter username"
+  (change)="user.set($event.target.value)"
+/>
+<button (click)="handleAddUser()">Add User</button>
+@for (user of users(); track user) {
+  <app-child
+    [userName]="user"
+    (selectedUser)="selectedUser($event)"
+    (deletedUser)="deleteUser($event)"
+  ></app-child>
+}

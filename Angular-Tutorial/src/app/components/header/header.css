@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: antiquewhite;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+.navbar {
+    width: 400px;
+}
+
+.navbarList {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.active {
+    color: rgb(120, 62, 1);
+    font-weight: 700;
+    font-size: 16px;
+}

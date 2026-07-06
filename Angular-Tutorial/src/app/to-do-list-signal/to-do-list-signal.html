@@ -1,0 +1,20 @@
+<h2>TO DO List</h2>
+<input
+  type="text"
+  [value]="task()"
+  (change)="task.set($event.target.value)"
+  placeholder="enter task"
+/>
+<button (click)="handleAddTask()">Add task</button>
+<ul>
+  @for (task of tasks(); track task.id) {
+    <li>
+      <span>{{ $index + 1 }}</span>
+      <span>{{ task.title }}</span>
+      <button (click)="handleDelete(task.id)">Delete</button>
+    </li>
+  }
+  @empty {
+    <span>No Task Found</span>
+  }
+</ul>

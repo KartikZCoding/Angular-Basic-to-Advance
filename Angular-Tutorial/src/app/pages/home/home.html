@@ -1,0 +1,14 @@
+<h1>Home Page</h1>
+<button (click)="goToProfile()">Go to Profile page</button>
+<hr>
+<h2>Query Params</h2>
+<a routerLink="/about" [queryParams]="{ id: user().id, name: user().name, age: user().age }">Go to Kartik About Page</a>
+<br />
+<a routerLink="/about" [queryParams]="{ id: 2, name: 'Aryan', age: 21 }">Go to Aryan About Page</a>
+<hr>
+<h2>Route Params</h2>
+<a routerLink="/contact/Aryan">Go to Aryan Contact Page</a>
+<br>
+<a [routerLink]="['/contact',user().name]">Go to Kartik Contact Page</a>
+<br>
+<button (click)="goToContact()">Go to Contact Page</button>

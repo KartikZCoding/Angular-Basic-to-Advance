@@ -1,0 +1,9 @@
+<h2>Custom Pipe Test</h2>
+<hr>
+<h3>Trim Text Pipe</h3>
+<h3>{{title() | trimText | uppercase}}</h3>
+<h3>{{text() | trimText:5 | titlecase}}</h3>
+<hr>
+<h3>Corrency Convertor Pipe</h3>
+<h3>{{amount() | correncyConvertor:20 | currency:'INR'}}</h3>
+<h3>{{amount() | correncyConvertor | currency:'INR'}}</h3>

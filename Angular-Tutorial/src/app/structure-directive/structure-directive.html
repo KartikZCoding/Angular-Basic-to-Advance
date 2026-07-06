@@ -1,0 +1,25 @@
+<h2>ngIf use</h2>
+<h1 *ngIf="isLogin(); else elseBlock" [ngStyle]="{ color: color }">Welcome Application</h1>
+<ng-template #elseBlock>
+  <h1 [ngStyle]="{ color: color }">Not Welcome</h1>
+</ng-template>
+<button (click)="isLogin() ? isLogin.set(false) : isLogin.set(true)">{{isLogin() ? "Logout" : "Login"}}</button>
+<hr>
+<h2>ngFor use</h2>
+<ul *ngFor="let user of users()">
+  <li [style.color]="color">{{ user }}</li>
+</ul>
+<hr>
+<h2>ngSwitch use</h2>
+<div>
+  <button type="button" (click)="color = 'red'">Red</button>
+  <button type="button" (click)="color = 'blue'">Blue</button>
+  <button type="button" (click)="color = 'green'">Green</button>
+</div>
+
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'red'" style="color: red">Color is red</p>
+  <p *ngSwitchCase="'blue'" style="color: blue">Color is blue</p>
+  <p *ngSwitchCase="'green'" style="color: green">Color is green</p>
+  <p *ngSwitchDefault style="color: black">Color is default</p>
+</div>

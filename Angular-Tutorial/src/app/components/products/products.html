@@ -1,0 +1,19 @@
+<!-- <h1>Products</h1>
+<button (click)="loadData()">Load Data</button>
+<ul>
+  @for (product of productData(); track product.id) {
+    <li>{{ product.id }}, {{ product.name }}, {{ product.price }}</li>
+  }
+</ul>
+<hr /> -->
+<h2>Product API List</h2>
+<ul class="product-list">
+  @for (product of productApiData(); track product.id) {
+    <ul class="product-details">
+      <li>Name : {{ product.title }}</li>
+      <li>Category : {{product.category}}</li>
+      <li>Price : {{product.price}}</li>
+      <button><a [routerLink]="['/details', product.id]">Show Product</a></button>
+    </ul>
+  }
+</ul>

@@ -1,0 +1,81 @@
+<h2>Conditional Statement</h2>
+<div>
+  @if (isLogin()) {
+    <span>Welcome, user</span>
+    <button (click)="handleLogin(false)">Logout</button>
+  } @else {
+    <span>Please login</span>
+    <button (click)="handleLogin(true)">Login</button>
+  }
+</div>
+<hr />
+<h2>Toggle</h2>
+@if (show()) {
+  <button (click)="show.set(false)">Hide</button>
+} @else {
+  <button (click)="show.set(true)">Show</button>
+}
+<hr />
+<h2>Multiple Condition</h2>
+<select (change)="handleStatus($event)" style="margin-right: 5px">
+  <option value="notStarted">Not Started</option>
+  <option value="inProgress">In Progress</option>
+  <option value="success">Success</option>
+  <option value="error">Error</option>
+</select>
+@if (status() == 'notStarted') {
+  <span>Not Started</span>
+} @else if (status() == 'inProgress') {
+  <span style="color: orange">In Progress</span>
+} @else if (status() == 'success') {
+  <span style="color: green">Success</span>
+} @else {
+  <span style="color: red">Error</span>
+}
+<hr />
+<h2>Control Flow Statement</h2>
+<ul>
+  @for (user of users(); track user) {
+    <li>{{ user }}</li>
+  }
+</ul>
+<hr />
+<h2>Array of object</h2>
+<ul>
+  @for (userDetail of userDetails(); track userDetail.id) {
+    <li [style.backgroundColor]="$even?'#CCC':'#DDD'">
+      {{ userDetail.id + ' ' + userDetail.name + ' ' + userDetail.surname }}
+      @if ($first) {
+        <span style="color: red;">Admin</span>
+      }
+      @if ($last) {
+        <span style="color: orange;">Guest</span>
+      }
+    </li>
+    @if ($count==$index+1) {
+        <span>Total users : {{$count}}</span>
+    }
+  }
+</ul>
+<hr>
+<h2>Switch case</h2>
+<select (change)="handleStatus($event)" style="margin-right: 5px">
+  <option value="notStarted">Not Started</option>
+  <option value="inProgress">In Progress</option>
+  <option value="success">Success</option>
+  <option value="error">Error</option>
+</select>
+@switch (status()) {
+    @case ('notStarted') {
+        <span>No update Yet</span>
+    }
+    @case ('inProgress') {
+        <span style="color: orange">In Progress</span>
+    }
+    @case ('success') {
+        <span style="color: green">Success</span>
+    }
+    @default {
+        <span style="color: red">Error</span>
+    }
+}

@@ -1,0 +1,23 @@
+<h2>Signal</h2>
+<p>Count Signal : {{countSignal()}}</p>
+<button (click)="updateCountS()">Count Signal Update</button>
+<br>
+<p>Count Property : {{count}}</p>
+<button (click)="updateCountP()">Count Property Update</button>
+<hr>
+<h2>Computed Signal</h2>
+<button (click)="updateValue(height, 1)">+</button> <span> Height : {{height()}} </span> <button (click)="updateValue(height,-1)">-</button>
+<br>
+<button (click)="updateValue(width, 1)">+</button> <span> Width : {{width()}} </span> <button (click)="updateValue(width,-1)">-</button>
+<p>Area (Height * Width) : {{area()}}</p>
+<hr>
+<h2>Effect Signal</h2>
+<p [style.color]="color()">Speed : {{speed()}}</p>
+<button (click)="updateSpeed(10)">Increase Speed</button>
+<br>
+<button (click)="updateSpeed(-speed())">Reset Speed</button>
+<hr>
+<h2>Input Field Binding</h2>
+<p>Value : {{value()}}</p>
+<input type="text" [value]="value()" (input)="setValue($event.target.value)">
+<button (click)="defaultValue()">Default Value</button>

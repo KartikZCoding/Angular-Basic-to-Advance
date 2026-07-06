@@ -1,0 +1,16 @@
+<h2>Signal binding</h2>
+<h3>{{name()}}</h3>
+<input type="text" [value]="name()" (input)="name.set($event.target.value)">
+<hr>
+<h2>Property binding using ngModel</h2>
+<h3>{{age}}</h3>
+<input type="text" [(ngModel)]="age">
+ <!-- <input type="text" [ngModel]="age" (ngModelChange)="age = $event"> -->
+<hr>
+<h2>Object two way binding</h2>
+<h3>{{userDetail().name}}</h3>
+<input type="text" [value]="userDetail().name" (input)="updateUserDetail('name', $event.target.value)">
+<h3>{{userDetail().age}}</h3>
+<input type="text" [value]="userDetail().age" (input)="updateUserDetail('age', $event.target.value)">
+<h3>{{userDetail().email}}</h3>
+<input type="text" [value]="userDetail().email" (input)="updateUserDetail('email', $event.target.value)">
