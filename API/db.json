@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "name": "Kartik Ahir",
+      "age": 22,
+      "email": "kartik@test.com",
+      "id": "1"
+    },
+    {
+      "name": "Rahul Patel",
+      "age": 65,
+      "email": "rahul@test123.com",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Priya Shah",
+      "age": 22,
+      "email": "priya@test.com"
+    },
+    {
+      "id": "4",
+      "name": "Amit Kumar",
+      "age": 27,
+      "email": "amit@test.com"
+    },
+    {
+      "id": "5",
+      "name": "Neha Verma",
+      "age": 23,
+      "email": "neha@test.com"
+    },
+    {
+      "id": "6",
+      "name": "Rohan Mehta",
+      "age": 25,
+      "email": "rohan@test.com"
+    },
+    {
+      "id": "7",
+      "name": "Sneha Joshi",
+      "age": 26,
+      "email": "sneha@test.com"
+    },
+    {
+      "id": "8",
+      "name": "Vishal Singh",
+      "age": 28,
+      "email": "vishal@test.com"
+    },
+    {
+      "id": "9",
+      "name": "Anjali Sharma",
+      "age": 20,
+      "email": "anjali@test.com"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
