@@ -40,8 +40,8 @@ export const routes: Routes = [
     // {path:"", component:Products},
     // {path:"details/:id", component:ProductsDetails}
 
-    {path:"", component:UserList},
-    {path:"add", component:AddUser},
-    {path:"edit/:id", component:EditUser}
+    // {path:"", component:UserList},
+    // {path:"add", component:AddUser},
+    // {path:"edit/:id", component:EditUser}
 
 ];

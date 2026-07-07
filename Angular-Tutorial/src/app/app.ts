@@ -23,6 +23,9 @@ import { FormSignal } from "./form-signal/form-signal";
 import { TemplateForm } from "./template-form/template-form";
 import { Products } from "./components/products/products";
 import { UserList } from './components/user-list/user-list';
+import { RxjsBasic } from "./RxJS/rxjs-basic/rxjs-basic";
+import { RxjsOperator } from "./RxJS/rxjs-operator/rxjs-operator";
+import { SubBehReplay } from "./RxJS/sub-beh-replay/sub-beh-replay";
 
 @Component({
   selector: 'app-root',
@@ -51,7 +54,10 @@ import { UserList } from './components/user-list/user-list';
     FormSignal,
     TemplateForm,
     Products,
-    UserList
+    UserList,
+    RxjsBasic,
+    RxjsOperator,
+    SubBehReplay
 ],
   templateUrl: './app.html',
   styleUrl: './app.css'
